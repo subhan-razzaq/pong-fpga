@@ -1,0 +1,31 @@
+# Vivado project folder (local only)
+vivado/
+
+# Vivado generated output anywhere in the tree
+.Xil/
+*.runs/
+*.cache/
+*.sim/
+*.hw/
+*.gen/
+*.ip_user_files/
+*.jou
+*.log
+*.str
+*.pb
+*.wdb
+*.backup.*
+xsim.dir/
+webtalk*
+usage_statistics_webtalk.*
+vivado_pid*
+
+# Build outputs
+*.bit
+*.dcp
+*.ltx
+
+# Editor and OS
+.vscode/
+Thumbs.db
+desktop.ini
