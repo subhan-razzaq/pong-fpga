@@ -1,26 +1,14 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09/22/2026 03:05:56 PM
-// Design Name: 
-// Module Name: clk_en
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
-module clk_en(
-
-    );
+module clk_en(input wire clk, output reg o_ce);
+    reg [1:0] counter = 2'd0;
+    always@(posedge clk) begin
+        o_ce <= 1'b0;
+        if (counter < 3) begin
+            counter <= counter + 1;
+        end 
+        else begin
+            o_ce <= 1'b1;
+            counter <= 0;
+        end
+    end
 endmodule
