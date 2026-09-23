@@ -1,9 +1,9 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
-| Date         : Wed Sep 23 00:34:23 2026
+| Date         : Wed Sep 23 00:41:56 2026
 | Host         : SRDell running 64-bit major release  (build 9200)
-| Command      : report_utilization -file C:/Pong/reports/util_test_pattern.rpt
+| Command      : report_utilization -file C:/Pong/reports/01_vga_test_pattern/util.rpt
 | Design       : pong_top
 | Device       : xc7a35tcpg236-1
 | Speed File   : -1
