@@ -14,8 +14,7 @@ module tb_vga_sync();
         clk = 1'b0;
         forever #5 clk = ~clk;
     end 
-    
-    clk_en clkgen(.clk(clk), .o_ce(clk_25));
+    clk_en #(.DIV(4)) clkgen(.clk(clk), .o_ce(clk_25));
     vga_sync_pulses pulse_check(.clk(clk), .i_ce(clk_25), .o_hsync(o_hsync), .o_vsync(o_vsync), .o_col_count(o_col_count), .o_row_count(o_row_count));
     vga_sync_to_count sync_check(.clk(clk), .i_ce(clk_25), .i_hsync(o_hsync), .i_vsync(o_vsync), .o_col_count(o_col_count1), .o_row_count(o_row_count1), .o_hsync(o_hsync_delayed), .o_vsync(o_vsync_delayed));
     test_pattern check(.clk(clk), .i_ce(clk_25), .i_hsync(o_hsync), .i_vsync(o_vsync), .o_hsync(o_hsync_tp), .o_vsync(o_vsync_tp), .o_red(o_red_tp), .o_green(o_green_tp), .o_blue(o_blue_tp));
