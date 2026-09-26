@@ -1,4 +1,5 @@
 `timescale 1 ns / 1ps
+`default_nettype none
 `include "vga_params.vh"
 module test_pattern(input wire clk, i_ce, i_hsync, i_vsync, output reg o_hsync, o_vsync, output reg [3:0] o_red, o_green, o_blue);
     wire [9:0] count_col, count_row;
@@ -50,3 +51,4 @@ module test_pattern(input wire clk, i_ce, i_hsync, i_vsync, output reg o_hsync, 
         end
     end
 endmodule
+`default_nettype wire

@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`default_nettype none
 module tb_debounce();
     reg clk;
     reg i_btn;
@@ -98,3 +99,4 @@ module tb_debounce();
         $finish;
     end
 endmodule
+`default_nettype wire

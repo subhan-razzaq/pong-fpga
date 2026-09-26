@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`default_nettype none
 // DIV MUST BE > 1
 module clk_en #(parameter DIV = 4)(input wire clk, output reg o_ce = 1'b0);
     reg [$clog2(DIV) - 1:0] counter = 0;
@@ -13,3 +14,4 @@ module clk_en #(parameter DIV = 4)(input wire clk, output reg o_ce = 1'b0);
         end
     end
 endmodule
+`default_nettype wire

@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`default_nettype none
 module tb_seven_seg_mux();
     reg clk;
     wire clk_25;
@@ -46,3 +47,4 @@ module tb_seven_seg_mux();
         $finish;
     end
 endmodule
+`default_nettype wire

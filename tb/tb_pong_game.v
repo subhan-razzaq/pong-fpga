@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
 // Shared grid macros: TILE_SIZE, TILE_COLUMN, TOTAL_COLUMNS, TOTAL_ROWS, X_MIN, X_MAX, CENTER_X, CENTER_Y
+`default_nettype none
 `include "vga_params.vh"
 module tb_pong_game();
     // Test constants
@@ -252,3 +253,4 @@ module tb_pong_game();
         $finish;
     end
 endmodule
+`default_nettype wire

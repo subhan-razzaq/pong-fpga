@@ -1,4 +1,5 @@
 `timescale 1 ns / 1 ps
+`default_nettype none
 module seven_seg_mux(input wire clk, i_ce, input wire [15:0] i_digits, input wire [3:0] i_blank, output reg [6:0] o_seg = 7'b1111111, output reg [3:0] o_an = 4'b1111);
      reg [1:0] digit_sel = 2'd0;
      reg [3:0] display_digit;
@@ -33,3 +34,4 @@ module seven_seg_mux(input wire clk, i_ce, input wire [15:0] i_digits, input wir
         end
     end
 endmodule
+`default_nettype wire

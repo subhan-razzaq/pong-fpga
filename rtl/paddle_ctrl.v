@@ -1,4 +1,5 @@
 `timescale 1 ns / 1 ps
+`default_nettype none
 `include "vga_params.vh"
 module paddle_ctrl #(parameter PADDLEX = 0, PADDLE_HEIGHT = 6, MOVE_DELAY = 1_250_000)(input wire clk, i_ce, input wire [$clog2(`TILE_COLUMN) - 1:0] i_tile_column, input wire [$clog2(`TILE_ROW) - 1:0] i_tile_row, input wire i_btnU, i_btnD, output wire o_draw_flag, output wire [$clog2(`TILE_ROW) - 1:0] o_paddleY);
     reg [$clog2(MOVE_DELAY) - 1:0] move_counter = 0;
@@ -35,3 +36,4 @@ module paddle_ctrl #(parameter PADDLEX = 0, PADDLE_HEIGHT = 6, MOVE_DELAY = 1_25
     assign o_paddleY = posY;
     assign o_draw_flag = (i_tile_column == PADDLEX && i_tile_row >= posY && i_tile_row <= posY + PADDLE_HEIGHT - 1) ? 1'b1 : 1'b0;
 endmodule
+`default_nettype wire

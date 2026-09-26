@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`default_nettype none
 module tb_paddle_ctrl();
     // Test constants, shared by the DUT instance and the checks
     localparam DELAY  = 8;   // move delay for this tb (real design uses 1,250,000)
@@ -140,3 +141,4 @@ module tb_paddle_ctrl();
         $finish;
     end
 endmodule
+`default_nettype wire

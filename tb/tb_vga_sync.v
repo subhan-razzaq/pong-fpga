@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`default_nettype none
 module tb_vga_sync();
     reg clk;
     wire clk_25;
@@ -24,3 +25,4 @@ module tb_vga_sync();
         $finish;
     end
 endmodule
+`default_nettype wire

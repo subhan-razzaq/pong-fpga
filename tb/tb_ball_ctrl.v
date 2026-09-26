@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
 // Shared grid macros: TILE_COLUMN, TILE_ROW, X_MIN, X_MAX, Y_MIN, Y_MAX, CENTER_X, CENTER_Y
+`default_nettype none
 `include "vga_params.vh"
 module tb_ball_ctrl();
 
@@ -190,3 +191,4 @@ module tb_ball_ctrl();
         $finish;
     end
 endmodule
+`default_nettype wire

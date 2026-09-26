@@ -1,4 +1,5 @@
 `timescale 1 ns / 1 ps
+`default_nettype none
 `include "vga_params.vh"
 module pong_game #(parameter PADDLE_DELAY = 1_250_000, BALL_DELAY = 1_250_000, SCORE_LIMIT = 9)(input wire clk, i_ce, i_vsync, i_hsync, i_start, i_btn1_U, i_btn1_D, i_btn2_U, i_btn2_D, output wire o_hsync, o_vsync, output wire [3:0] o_red, o_green, o_blue, output wire [3:0] o_p1_score, o_p2_score);
     localparam IDLE = 2'd0, RUNNING = 2'd1, POINT = 2'd2, GAME_OVER = 2'd3;
@@ -146,3 +147,4 @@ module pong_game #(parameter PADDLE_DELAY = 1_250_000, BALL_DELAY = 1_250_000, S
     assign o_p1_score = p1_score;
     assign o_p2_score = p2_score;
 endmodule
+`default_nettype wire

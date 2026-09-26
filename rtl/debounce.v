@@ -1,4 +1,5 @@
 `timescale 1 ns / 1 ps
+`default_nettype none
 module debounce#(parameter LIMIT = 1_000_000) (input wire clk, input wire i_btn, output wire o_btn);  // LIMIT MUST BE >= 2
     reg state = 1'b0;
     (* ASYNC_REG = "TRUE" *) reg btn_first = 1'b0;
@@ -22,3 +23,4 @@ module debounce#(parameter LIMIT = 1_000_000) (input wire clk, input wire i_btn,
     end
     assign o_btn = state;
 endmodule
+`default_nettype wire

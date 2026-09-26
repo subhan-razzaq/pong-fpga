@@ -1,4 +1,5 @@
 `timescale 1 ns / 1 ps
+`default_nettype none
 module pong_top(input wire clk, input wire btnC, input wire [15:0] sw, output wire Hsync, Vsync, dp, output wire [3:0] vgaRed, vgaGreen, vgaBlue, an, output wire [6:0] seg);
     wire clk_25;
     wire clk_1k;
@@ -27,3 +28,4 @@ module pong_top(input wire clk, input wire btnC, input wire [15:0] sw, output wi
         end
     end
 endmodule
+`default_nettype wire

@@ -1,4 +1,5 @@
 `timescale 1 ns / 1 ps
+`default_nettype none
 `include "vga_params.vh"
 module ball_ctrl #(parameter MOVE_DELAY = 1_250_000) (input wire clk, i_ce, i_game_active,input wire [$clog2(`TILE_COLUMN) - 1:0] i_tile_column, input wire [$clog2(`TILE_ROW) - 1:0] i_tile_row, output wire o_draw_flag, output wire [$clog2(`TILE_COLUMN)-1:0] o_ball_x, output wire [$clog2(`TILE_ROW)-1:0] o_ball_y);
     reg [$clog2(MOVE_DELAY) - 1:0] move_counter = 0;
@@ -61,3 +62,4 @@ module ball_ctrl #(parameter MOVE_DELAY = 1_250_000) (input wire clk, i_ce, i_ga
     assign o_ball_x = ball_x;
     assign o_ball_y = ball_y;
 endmodule
+`default_nettype wire

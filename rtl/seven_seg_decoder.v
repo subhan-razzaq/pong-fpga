@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`default_nettype none
 module seven_seg_decoder(input wire [3:0] i_hex, output reg [6:0] o_seg);
     always@(*) begin
         case (i_hex)
@@ -22,3 +23,4 @@ module seven_seg_decoder(input wire [3:0] i_hex, output reg [6:0] o_seg);
         endcase
     end
 endmodule
+`default_nettype wire

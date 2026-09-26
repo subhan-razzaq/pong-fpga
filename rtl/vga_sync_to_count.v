@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`default_nettype none
 `include "vga_params.vh"
 module vga_sync_to_count(input wire clk, i_ce, i_hsync, i_vsync, output reg [9:0] o_col_count = 10'b0, o_row_count = 10'b0, output reg o_hsync = 1'b0, o_vsync = 1'b0);
     always@(posedge clk) begin
@@ -26,3 +27,4 @@ module vga_sync_to_count(input wire clk, i_ce, i_hsync, i_vsync, output reg [9:0
        end
      end
 endmodule
+`default_nettype wire
