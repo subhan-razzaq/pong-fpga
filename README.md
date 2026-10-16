@@ -23,7 +23,6 @@
 | [Controls](#controls) | Button mapping and game flow |
 | [Build and run](#build-and-run) | Vivado steps and saving reports |
 | [Repo layout](#repo-layout) | Where everything lives |
-| [What I'd do next](#what-id-do-next) | Known limits and next steps |
 | [Acknowledgements](#acknowledgements) | Nandland and Digilent |
 
 </div>
@@ -268,16 +267,6 @@ save_reports 05_final_pong
 ├── scripts/                   Vivado Tcl scripts, including save_reports.tcl
 └── tb/                        Six testbenches, four of them self-checking
 ```
-
-## What I'd do next
-
-- Write `scripts/build.tcl`, which is still empty, so the whole flow from project creation to bitstream runs in batch mode with one command.
-- Use an MMCM to get close to the standard 25.175 MHz pixel clock, and handle the clock domain crossing that comes with it.
-- Add a real reset: one synchronized reset input instead of relying on power-on initial values.
-- Make the ball more interesting. Speed it up as a rally goes on, let the hit position on the paddle change the angle, and alternate the serve, since every serve currently goes right and up.
-- Add sound for hits and points through a Pmod audio amplifier.
-- Add a single-player mode with a computer-controlled paddle that tracks the ball.
-- Constrain or false-path the I/O. Vivado's TIMING-18 check flags 30 ports with no input or output delay.
 
 ## Acknowledgements
 
